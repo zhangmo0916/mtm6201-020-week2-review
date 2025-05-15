@@ -1,19 +1,246 @@
+/* Importing Anton font for headings */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 
 html {
-  box-sizing: border-box;
+  box-sizing: border-box;  /* Applies border-box sizing to all elements for consistent layout */
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: inherit;  /* Inherit border-box from html element */
 }
 
 body {
-  font-family: Verdana, Tahoma, sans-serif;
-  margin: 0;
-  line-height: 1.4;
+  font-family: Verdana, Tahoma, sans-serif;  /* Sets default font for body */
+  margin: 0;  /* Removes default margin */
+  line-height: 1.4;  /* Improves readability by spacing lines */
 }
+
+img {
+  /* Prevents images from overflowing their container */
+
+  /* Maintains aspect ratio */
+
+  /* Prevents extra space below image and allows it to fully respect width/height settings */
+
+}
+
+h1, h2, h3, button {
+   /* Applies google font */
+
+}
+
+
+/* For font sizes I used a type scale. We will be covering this again in a future class. You should be using rems instead of px for font sizes.*/
+
+h1 {
+  /* White text */
+
+  font-size: 4.209rem;  /* 4.209 * 16 = 67.34px */
+  
+  /* Centers text */
+  
+  /* Adds drop shadow for readability */
+}
+
+h2 {
+  /* Brand pink text */
+  
+  font-size: 3.157rem;  /* 3.157 * 16 = 50.5px */
+  
+  /* Removes default margin on top only */
+
+}
+
+h3 {
+  font-size: 2.369rem;  /* 3.157 * 16 = 37.9px */
+  
+  /* Makes text uppercase */
+  
+  /* Removes margin */
+
+}
+
+.wrapper {
+  /* Limits width of content */
+
+  /* Centers wrapper */
+
+  /* Adds padding left/right */
+
+}
+
+header .wrapper{
+  /* Defines header wrapper as a flex container */
+
+  /* Applies all extra space between the logo and navigation */
+
+  /* Aligns logo and navigation vertically */
+
+}
+
+#logo {
+  /* Sets logo width */
+
+}
+
+header nav ul {
+  /* Removes bullets */
+
+  /* Remove default padding on left */
+
+  /* Defines nav ul as a flex container and brings list items up on one row */
+
+}
+
+header nav ul a {
+  
+  /* Brand pink background */
+
+  /* White text */
+
+  /* Spacing inside button */
+
+  /* Removes underline */
+
+  /* Adds space between nav links */
+
+   /* Adds a button border */
+
+}
+
+header nav ul a:hover,
+header nav ul a:focus {
+  /* Inverts colors on hover/focus */
+  
+}
+
+#hero {
+  /* Sets hero section height to 60% of viewport height */
+
+  /* Background color fallback in case image doesn't load */
+
+  /* Path to background image */
+
+  /* Scales image to cover area */
+  
+  /* Centers image */
+
+  /* Center heading horizontally and vertically within hero */
+
+}
+
+section {
+  /* Add space on top and bottom of section 4 * 16 = 64px */
+
+}
+
+.product-container { 
+  /* Defining container as a grid - will not visually change on the page but will introduce grid lines */
+
+  /* 1 column by default */
+
+  /* Space between items */
+
+}
+
+.product-card {
+  /* Rounded corners */
+  
+  /* Add space between content and border of card */
+  
+  /* Center content */
+  
+  /* White text */
+
+  /* This makes the product card a flex container so that you have additional alignment and distribution properties available for use */
+
+  /* By default, items are laid out in a row so setting to column will stack items vertically */
+  
+  /* Fixes button from stretching */
+
+}
+
+/* Custom colors for each card */
+.product-card:nth-child(1) {
+  background-color: #E1729A;
+}
+
+.product-card:nth-child(2) {
+  background-color: #C78E62;
+}
+
+.product-card:nth-child(3) {
+  background-color: #5ac93c;
+  background-color: #F1AD2C;
+}
+
+.product-card:nth-child(4) {
+  background-color: #2CD39C;
+}
+
+.product-card p {
+  /* Removes a bit of space between paragraphs */
+
+}
+
+.product-card p.price {
+  /* Highlights price */
+
+  /* Removes margin on top */
+
+  /* Adds space below price */
+}
+
+.product-card button {
+  
+
+  font-size: 1.125rem;  /* 1.125 * 16 = 18px */
+  
+  /* Removes default border */
+  
+  /* Adds pointer cursor on hover */
+  
+  /* Pushes button to bottom of flex container */
+
+}
+
+.product-card button:hover,
+.product-card button:focus {
+  /* Inverts colors */
+  
+}
+
+footer {
+  
+}
+
+
+/* Media queries */
+
+/*
+  Media queries use em units instead of px for better accessibility and scalability. 
+  Since ems scale with the root font size, they respect user settings and adjust more naturally 
+  across different devices and browsers. 1em = 16px by default, so 600px = 37.5em, 1080px = 67.5em
+*/
+
+/* Apply a media query for min-width of 37.5em to adjust the logo size and adjust product container to two columns */
+
+  /* #logo {
+    width: 120px;  
+  }
+
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);  
+  } */
+
+
+
+/* Apply a media query for min-width of 67.5em to adjust product container to four columns */
+ 
+  /* .product-container {
+    grid-template-columns: repeat(4, 1fr); 
+  } */
 
 
 
