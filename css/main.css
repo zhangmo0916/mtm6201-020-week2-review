@@ -17,147 +17,152 @@ body {
 }
 
 img {
-  /* Prevents images from overflowing their container */
+  width: 100%; /* Prevents images from overflowing their container */
 
-  /* Maintains aspect ratio */
+  height: auto; /* Maintains aspect ratio */
 
-  /* Prevents extra space below image and allows it to fully respect width/height settings */
+  display: block; /* Prevents extra space below image and allows it to fully respect width/height settings */
 
 }
 
 h1, h2, h3, button {
    /* Applies google font */
-
+  font-family: "Anton", sans-serif;
 }
 
 
 /* For font sizes I used a type scale. We will be covering this again in a future class. You should be using rems instead of px for font sizes.*/
 
 h1 {
-  /* White text */
+  color: white; /* White text */
 
   font-size: 4.209rem;  /* 4.209 * 16 = 67.34px */
   
-  /* Centers text */
+  text-align: center; /* Centers text */
   
-  /* Adds drop shadow for readability */
+  text-shadow: 2px 3px 4px rgba(0,0,0,0.6); /* Adds drop shadow for readability */
 }
 
 h2 {
-  /* Brand pink text */
+  color: #f54f95;/* Brand pink text */
   
   font-size: 3.157rem;  /* 3.157 * 16 = 50.5px */
   
-  /* Removes default margin on top only */
+  margin-top: 0; /* Removes default margin on top only */
 
 }
 
 h3 {
   font-size: 2.369rem;  /* 3.157 * 16 = 37.9px */
   
-  /* Makes text uppercase */
+  text-transform: uppercase; /* Makes text uppercase */
   
-  /* Removes margin */
+  margin: 0; /* Removes margin */
 
 }
 
 .wrapper {
-  /* Limits width of content */
+  max-width: 1200px; /* Limits width of content */
 
-  /* Centers wrapper */
+  margin: 0 auto; /* Centers wrapper */
 
-  /* Adds padding left/right */
+  padding: 0 1em; /* Adds padding left/right */
 
 }
 
-header .wrapper{
-  /* Defines header wrapper as a flex container */
+header .wrapper {
+  display: flex; /* Defines header wrapper as a flex container */
 
-  /* Applies all extra space between the logo and navigation */
+  justify-content: space-between; /* Applies all extra space between the logo and navigation */
 
-  /* Aligns logo and navigation vertically */
+  align-items: center; /* Aligns logo and navigation vertically */
 
 }
 
 #logo {
-  /* Sets logo width */
+  width: 80px; /* Sets logo width */
 
 }
 
 header nav ul {
-  /* Removes bullets */
+  list-style: none; /* Removes bullets */
 
-  /* Remove default padding on left */
+  padding-left: 0; /* Remove default padding on left */
 
-  /* Defines nav ul as a flex container and brings list items up on one row */
+  display: flex; /* Defines nav ul as a flex container and brings list items up on one row */
 
 }
 
 header nav ul a {
+  display: inline-block; 
   
-  /* Brand pink background */
+  background-color: #f54f95; /* Brand pink background */
 
-  /* White text */
+  color: white; /* White text */
 
-  /* Spacing inside button */
+  padding: .5em 1em; /* Spacing inside button */
 
-  /* Removes underline */
+  text-decoration: none; /* Removes underline */
 
-  /* Adds space between nav links */
+  margin-left: 1em; /* Adds space between nav links */
 
-   /* Adds a button border */
+  border: 1px solid #f54f95; /* Adds a button border */
 
 }
 
 header nav ul a:hover,
 header nav ul a:focus {
   /* Inverts colors on hover/focus */
-  
+  background-color: white;
+  color: #f54f95;
 }
 
 #hero {
-  /* Sets hero section height to 60% of viewport height */
+  height: 60vh; /* Sets hero section height to 60% of viewport height */
 
-  /* Background color fallback in case image doesn't load */
+  background-color: #f54f95; /* Background color fallback in case image doesn't load */
 
-  /* Path to background image */
+  background-image: url(../images/hero-donuts.jpg); /* Path to background image */
 
-  /* Scales image to cover area */
+  background-size: cover; /* Scales image to cover area */
   
-  /* Centers image */
+  background-position: center; /* Centers image */
 
   /* Center heading horizontally and vertically within hero */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 section {
-  /* Add space on top and bottom of section 4 * 16 = 64px */
+  padding: 4em 0; /* Add space on top and bottom of section 4 * 16 = 64px */
 
 }
 
 .product-container { 
-  /* Defining container as a grid - will not visually change on the page but will introduce grid lines */
+  display: grid; /* Defining container as a grid - will not visually change on the page but will introduce grid lines */
 
-  /* 1 column by default */
+  grid-template-columns: 1fr; /* 1 column by default */
 
-  /* Space between items */
+  gap: 1em; /* Space between items */
 
 }
 
 .product-card {
-  /* Rounded corners */
+  border-radius: 14px; /* Rounded corners */
   
-  /* Add space between content and border of card */
+  padding: 2em 1.25em; /* Add space between content and border of card */
   
-  /* Center content */
+  text-align: center; /* Center content */
   
-  /* White text */
+  color: white; /* White text */
 
-  /* This makes the product card a flex container so that you have additional alignment and distribution properties available for use */
+  display: flex; /* This makes the product card a flex container so that you have additional alignment and distribution properties available for use */
 
-  /* By default, items are laid out in a row so setting to column will stack items vertically */
+  flex-direction: column; /* By default, items are laid out in a row so setting to column will stack items vertically */
   
-  /* Fixes button from stretching */
+  align-items: center; /* Fixes button from stretching */
 
 }
 
@@ -180,39 +185,52 @@ section {
 }
 
 .product-card p {
-  /* Removes a bit of space between paragraphs */
+  margin: .5em 0; /* Removes a bit of space between paragraphs */
 
 }
 
 .product-card p.price {
-  /* Highlights price */
+  font-weight: bold; /* Highlights price */
 
-  /* Removes margin on top */
+  margin-top: 0; /* Removes margin on top */
 
-  /* Adds space below price */
+  margin-bottom: 1.125rem; /* Adds space below price */
 }
 
 .product-card button {
-  
+  display: inline-block;
+
+  background-color: white;
+
+  color: #f54f95;
 
   font-size: 1.125rem;  /* 1.125 * 16 = 18px */
   
-  /* Removes default border */
+  border: none; /* Removes default border */
   
-  /* Adds pointer cursor on hover */
+  padding: .5em 1.5em;
+
+  border-radius: 20px;
   
-  /* Pushes button to bottom of flex container */
+  cursor: pointer; /* Adds pointer cursor on hover */
+  
+  margin-top: auto; /* Pushes button to bottom of flex container */
 
 }
 
 .product-card button:hover,
 .product-card button:focus {
   /* Inverts colors */
+  background-color: #f54f95;
+  color: white;
   
 }
 
 footer {
-  
+  background-color: #f54f95;
+  padding: .5em 0;
+  text-align: center;
+  color: white;
 }
 
 
@@ -226,6 +244,17 @@ footer {
 
 /* Apply a media query for min-width of 37.5em to adjust the logo size and adjust product container to two columns */
 
+
+@media (min-width: 37.5em ){
+  #logo {
+  width: 120px;  
+  }
+
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);  
+  }
+  }
+
   /* #logo {
     width: 120px;  
   }
@@ -238,6 +267,12 @@ footer {
 
 /* Apply a media query for min-width of 67.5em to adjust product container to four columns */
  
+@media (min-width: 67.5em){
+   .product-container {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
   /* .product-container {
     grid-template-columns: repeat(4, 1fr); 
   } */
